@@ -5,7 +5,7 @@ conda create -p venv python==3.7 -y
 
 ### Activate the environment
 ```
-conda activate venv
+conda activate venv/
 ```
 
 ### Install the requirements for the project

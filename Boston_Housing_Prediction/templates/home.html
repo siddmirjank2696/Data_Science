@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Setting the title of the prediction page -->
+    <title>Boston Housing Price Prediction</title>
+
+    <!-- Formatting the prediction page -->
+    <style>
+
+        body
+        {
+            background-color: aqua;
+        }
+
+        h1
+        {
+            color: red;
+            text-align: center;
+            font-size: 300%;
+        }
+
+        h2
+        {
+            color: red;
+            font-size: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Writing the header text for the prediction page -->
+    <h1>
+        Boston Housing Price Prediction
+    </h1>
+    <br><br><br><br>
+
+    <!-- Creating a form to input new data for prediction -->
+    <form action="{{url_for('predict')}}", method="post">
+
+        <div>
+            <h2>
+                <label for="CRIM">Per Capita Crime Rate (CRIM):</label>
+                <input type="text", id="CRIM", name="CRIM", size=5, required="required">
+            </h2>
+        
+            <h2>
+                <label for="ZN">Proportion Of Land Zoned Fot Lots Over 25000 Sq. Ft. (ZN):</label>
+                <input type="text", id="ZN", name="ZN", size=5, required="required">
+            </h2>
+       
+            <h2>
+                <label for="INDUS">Proportion Of Non-Retail Business Acres (INDUS):</label>
+                <input type="text", id="INDUS", name="INDUS", size=5, required="required">
+            </h2>
+        
+            <h2>
+                <label for="CHAS">Charles River Dummy Variable (1 or 0) (CHAS):</label>
+                <input type="text", id="CHAS", name="CHAS", size=5, required="required">
+            </h2>
+       
+            <h2>
+                <label for="NOX">Nitric Oxide Concentration Per 10 mil (NOX):</label>
+                <input type="text", id="NOX", name="NOX", size=5, required="required">
+            </h2>
+        
+            <h2>
+                <label for="RM">Avg. Number Of Rooms Per Dwelling (RM):</label>
+                <input type="text", id="RM", name="RM", size=5, required="required">
+            </h2>
+       
+            <h2>
+                <label for="AGE">Proportion Of Owner-occupied Units Built Prior To 1940 (AGE):</label>
+                <input type="text", id="AGE", name="AGE", size=5, required="required">
+            </h2>
+        
+            <h2>
+                <label for="DIS">Weighted Distances To 5 Boston Employment Centres (DIS):</label>
+                <input type="text", id="DIS", name="DIS", size=5, required="required">
+            </h2>
+       
+            <h2>
+                <label for="RAD">Index Of Accessibility To Radial Highways (RAD):</label>
+                <input type="text", id="RAD", name="RAD", size=5, required="required">
+            </h2>
+        
+            <h2>
+                <label for="TAX">Full-value Property-tax Rate Per $10,000 (TAX):</label>
+                <input type="text", id="TAX", name="TAX", size=5, required="required">
+            </h2>
+       
+            <h2>
+                <label for="PTRATIO">Pupil-teacher Ratio By Town (PTRATIO):</label>
+                <input type="text", id="PTRATIO", name="PTRATIO", size=5, required="required">
+            </h2>
+        
+            <h2>
+                <label for="B">Proportion Of POC By Town (1000(POC - 0.63)^2) (B):</label>
+                <input type="text", id="B", name="B", size=5, required="required">
+            </h2>
+       
+            <h2>
+                <label for="LSTAT">% Lower Status Of The Population (LSTAT):</label>
+                <input type="text", id="LSTAT", name="LSTAT", size=5, required="required">
+            </h2>
+        </div>
+        <br><br><br><br><br><br>
+
+        <div>
+            <input type="reset">
+            <button type="submit">Predict</button>
+        </div>
+        <br>
+
+    </form>
+    <br><br><br>
+
+    <!-- Setting a placeholder for the prediction text -->
+    {{prediction_text}}
+
+</body>
+</html>
