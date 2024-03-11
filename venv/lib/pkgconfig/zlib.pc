@@ -1,0 +1,13 @@
+prefix=/Users/siddheshmirjankar/Documents/Siddhesh/Projects/GitHub/Data_Science/venv
+exec_prefix=/Users/siddheshmirjankar/Documents/Siddhesh/Projects/GitHub/Data_Science/venv
+libdir=/Users/siddheshmirjankar/Documents/Siddhesh/Projects/GitHub/Data_Science/venv/lib
+sharedlibdir=/Users/siddheshmirjankar/Documents/Siddhesh/Projects/GitHub/Data_Science/venv/lib
+includedir=/Users/siddheshmirjankar/Documents/Siddhesh/Projects/GitHub/Data_Science/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
