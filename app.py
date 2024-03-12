@@ -19,7 +19,7 @@ scaler = pickle.load(open("scaler.pkl", "rb"))
 @app.route("/")
 def home():
 
-    # Returning thr home page
+    # Returning the home page
     return render_template("home.html")
 
 
@@ -46,5 +46,5 @@ def predict():
 # Creating a main function
 if __name__ == "__main__":
 
-    # Allowing debugging of the app
-    app.run(debug=True)
+    # Allowing debugging of the app and hosting it on my local host at port 4000
+    app.run(debug=True, host='0.0.0.0', port=4000)
