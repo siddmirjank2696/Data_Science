@@ -1,3 +1,7 @@
+# Deploying Machine Learning models in Microsoft Azure
+
+#### Referred https://www.youtube.com/watch?v=g687fRBNNGo&t=94s
+
 ### 1. Create a new Container Registry in Azure and create a new resource group within it.
 
 
